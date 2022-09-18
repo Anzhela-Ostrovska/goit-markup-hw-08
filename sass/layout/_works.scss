@@ -1,0 +1,29 @@
+.works-section {
+  padding-bottom: 94px;
+}
+.works {
+  display: flex;
+}
+
+.works__item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.works__thumb {
+  position: relative;
+}
+
+.works__text {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background-color: var(--backdrop-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--secondary-text-color-white);
+}
