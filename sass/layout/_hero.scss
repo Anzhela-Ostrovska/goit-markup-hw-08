@@ -57,14 +57,14 @@
   screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('/images/overlay-mobile@2x.jpg');
+      url('../images/overlay-mobile@2x.jpg');
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('/images/overlay-tablet.jpg');
+      url('../images/overlay-tablet.jpg');
   }
 }
 
@@ -73,14 +73,14 @@
   screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('/images/overlay-tablet@2x.jpg');
+      url('../images/overlay-tablet@2x.jpg');
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('/images/overlay-desktop.jpg');
+      url('../images/overlay-desktop.jpg');
   }
 }
 
@@ -89,7 +89,7 @@
   screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('/images/overlay-desktop@2x.jpg');
+      url('../images/overlay-desktop@2x.jpg');
   }
 }
 @media screen and (min-width: 1200px) {
