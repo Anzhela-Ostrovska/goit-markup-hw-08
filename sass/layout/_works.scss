@@ -1,5 +1,9 @@
 .works-section {
   padding-bottom: 94px;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 .works {
   display: flex;
@@ -27,3 +31,6 @@
   text-transform: uppercase;
   color: var(--secondary-text-color-white);
 }
+// .works-section {
+
+// }

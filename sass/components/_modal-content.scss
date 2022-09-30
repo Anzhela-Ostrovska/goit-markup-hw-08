@@ -2,8 +2,11 @@
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.5;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 .form {
   display: flex;
@@ -111,7 +114,12 @@
     fill: var(--accent-color);
   }
 }
-
+.agreement__text {
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
 .agreement__input {
   appearance: none;
   position: absolute;

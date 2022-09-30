@@ -2,7 +2,7 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Студія</title>
     <link
@@ -18,7 +18,7 @@
   <body>
     <!-- Шапка сайта -->
     <header class="page-header">
-      <div class="container nav">
+      <div class="container page-header__container nav">
         <nav class="nav">
           <a href="./index.html" class="logo link">Web<span class="nav-studio">Studio</span></a>
 
@@ -34,6 +34,11 @@
             <li class="site-nav__item"><a href="" class="site-nav__link link">Контакти</a></li>
           </ul>
         </nav>
+        <button type="button" class="burger-btn" data-menu-open>
+          <svg class="burger-btn__icon">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
 
         <ul class="auth-nav list">
           <li class="auth-nav__item">
@@ -53,6 +58,44 @@
             </a>
           </li>
         </ul>
+      </div>
+      <div class="mob-menu" data-menu>
+        <div class="container mob-menu__container">
+          <button type="button" class="mob-menu__close-btn" data-menu-close>
+            <svg class="mob-menu__close-icon">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="burger-nav list">
+            <li class="burger__item burger__studio">
+              <a href="./index.html" class="burger__link link .site-nav__link_active active"
+                >Студія</a
+              >
+            </li>
+            <li class="burger__item burger__portfolio">
+              <a href="./portfolio.html" class="burger__link link">Портфоліо</a>
+            </li>
+            <li class="burger__item burger__kontakt">
+              <a href="" class="burger__link link">Контакти</a>
+            </li>
+          </ul>
+          <ul class="auth-burger list">
+            <li class="auth-burger__phone">
+              <a class="auth-burger__link link" href="tel:+380961111111"> +38 096 111 11 11 </a>
+            </li>
+            <li class="auth-burger__mail">
+              <a class="auth-burger__link link" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="soc-media list">
+            <li class="soc-media__item"><a class="soc-media__link link" href="">Instagram</a></li>
+            <li class="soc-media__item"><a class="soc-media__link link" href="">Twitter</a></li>
+            <li class="soc-media__item"><a class="soc-media__link link" href="">Facebook</a></li>
+            <li class="soc-media__item"><a class="soc-media__link link" href="">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -146,11 +189,19 @@
           <ul class="works list">
             <li class="works__item">
               <div class="works__thumb">
-                <img
-                  src="./images/box-1.jpg"
-                  alt="Дизайнер верстає сторінку на ноутбуці"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="./images/box.webp 1x, ./images/box@2x.webp 2x"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/box.jpg 1x, ./images/box@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img src="./images/box-1.jpg" alt="Дизайнер верстає сторінку на ноутбуці" />
+                </picture>
                 <div class="works__backdrop">
                   <p class="works__text">Десктопні додатки</p>
                 </div>
@@ -158,11 +209,22 @@
             </li>
             <li class="works__item">
               <div class="works__thumb">
-                <img
-                  src="./images/box-2.jpg"
-                  alt="За рабочим столом сидить дизайнер з телефоном в руці."
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="./images/2box.webp 1x, ./images/2box@2x.webp 2x"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/2box.jpg 1x, ./images/2box@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/box-2.jpg"
+                    alt="За рабочим столом сидить дизайнер з телефоном в руці."
+                  />
+                </picture>
                 <div class="works__backdrop">
                   <p class="works__text">Мобільні додатки</p>
                 </div>
@@ -170,11 +232,22 @@
             </li>
             <li class="works__item">
               <div class="works__thumb">
-                <img
-                  src="./images/box-3.jpg"
-                  alt="Дизайнер за рабочим столом выбирає колір на планшеті для майбутнього проекту"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="./images/3box.webp 1x, ./images/3box@2x.webp 2x"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/3box.jpg 1x, ./images/3box@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/box-3.jpg"
+                    alt="Дизайнер за рабочим столом выбирає колір на планшеті для майбутнього проекту"
+                  />
+                </picture>
                 <div class="works__backdrop">
                   <p class="works__text">Дизайнерські рішення</p>
                 </div>
@@ -189,7 +262,36 @@
           <h2 class="title">Наша команда</h2>
           <ul class="workers list">
             <li class="workers__item">
-              <img src="./images/igor.jpg" alt="Продукт-Дизайнер Ігор Дем'яненко" width="270" />
+              <picture>
+                <source
+                  srcset="./images/1workers-desktop.webp 1x, ./images/1workers-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/1workers-desktop.jpg 1x, ./images/1workers-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/1workers-tablet.webp 1x, ./images/1workers-tablet@2x.webp 2x"
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/1workers-tablet.jpg 1x, ./images/1workers-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/1workers-mobile.webp 1x, ./images/1workers-mobile@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/1workers-mobile.jpg 1x, ./images/1workers-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/igor.jpg" alt="Продукт-Дизайнер Ігор Дем'яненко" />
+              </picture>
               <div class="worker__info">
                 <h3 class="worker__title">Ігор Дем'яненко</h3>
                 <p class="worker__text">Product Designer</p>
@@ -226,7 +328,36 @@
               </div>
             </li>
             <li class="workers__item">
-              <img src="./images/olga.jpg" alt="Розробник Ольга Репіна" width="270" />
+              <picture>
+                <source
+                  srcset="./images/2workers-desktop.webp 1x, ./images/2workers-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/2workers-desktop.jpg 1x, ./images/2workers-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/2workers-desktop.webp 1x, ./images/2workers-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/2workers-tablet.jpg 1x, ./images/2workers-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/2workers-desktop.webp 1x, ./images/2workers-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/2workers-mobile.jpg 1x, ./images/2workers-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/olga.jpg" alt="Розробник Ольга Репіна" />
+              </picture>
               <div class="worker__info">
                 <h3 class="worker__title">Ольга Рєпіна</h3>
                 <p class="worker__text">Frontend Developer</p>
@@ -263,7 +394,36 @@
               </div>
             </li>
             <li class="workers__item">
-              <img src="./images/nikolay.jpg" alt="Маркетолог Микола Тарасов" width="270" />
+              <picture>
+                <source
+                  srcset="./images/3workers-desktop.webp 1x, ./images/3workers-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/3workers-desktop.jpg 1x, ./images/3workers-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/3workers-desktop.webp 1x, ./images/3workers-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/3workers-tablet.jpg 1x, ./images/3workers-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/3workers-desktop.webp 1x, ./images/3workers-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/3workers-mobile.jpg 1x, ./images/3workers-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/nikolay.jpg" alt="Маркетолог Микола Тарасов" />
+              </picture>
               <div class="worker__info">
                 <h3 class="worker__title">Микола Тарасов</h3>
                 <p class="worker__text">Marketing</p>
@@ -300,7 +460,36 @@
               </div>
             </li>
             <li class="workers__item">
-              <img src="./images/michail.jpg" alt="Дизайнер Михайло Єрмаков" width="270" />
+              <picture>
+                <source
+                  srcset="./images/4workers-desktop.webp 1x, ./images/4workers-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/4workers-desktop.jpg 1x, ./images/4workers-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/4workers-desktop.webp 1x, ./images/4workers-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/4workers-tablet.jpg 1x, ./images/4workers-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/4workers-desktop.webp 1x, ./images/4workers-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/4workers-mobile.jpg 1x, ./images/4workers-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/michail.jpg" alt="Дизайнер Михайло Єрмаков" />
+              </picture>
               <div class="worker__info">
                 <h3 class="worker__title">Михайло Єрмаков</h3>
                 <p class="worker__text">UI Designer</p>
@@ -393,82 +582,84 @@
     <!-- Футер -->
     <footer class="footer">
       <div class="container footer-container">
-        <div class="footer-address">
-          <div class="footer-logo">
-            <a href="./index.html" class="logo link"
-              >Web<span class="footer-studio">Studio</span></a
-            >
+        <div class="footer-tablet">
+          <div class="footer-address">
+            <div class="footer-logo">
+              <a href="./index.html" class="logo link"
+                >Web<span class="footer-studio">Studio</span></a
+              >
+            </div>
+            <address class="address">
+              <ul class="address__list list">
+                <li class="address__item">
+                  <a
+                    class="address__link link"
+                    href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__mail link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a class="address__phone link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
           </div>
-          <address class="address">
-            <ul class="address__list list">
-              <li class="address__item">
-                <a
-                  class="address__link link"
-                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+          <div class="footer-social-media">
+            <h3 class="footer-social-media__title">Приєднуйтесь</h3>
+            <ul class="social-media list">
+              <li class="social-media__item">
+                <a href="" class="social-media__link footer-social-media__link">
+                  <svg
+                    lang="en"
+                    aria-label="instagram icon"
+                    class="social-media__icon footer-social-media__icon"
+                  >
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__mail link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+              <li class="social-media__item">
+                <a href="" class="social-media__link footer-social-media__link">
+                  <svg
+                    lang="en"
+                    aria-label="twitter icon"
+                    class="social-media__icon footer-social-media__icon"
+                  >
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li>
-                <a class="address__phone link" href="tel:+380961111111">+38 096 111 11 11</a>
+              <li class="social-media__item">
+                <a href="" class="social-media__link footer-social-media__link">
+                  <svg
+                    lang="en"
+                    aria-label="facebook icon"
+                    class="social-media__icon footer-social-media__icon"
+                  >
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media__item">
+                <a href="" class="social-media__link footer-social-media__link">
+                  <svg
+                    lang="en"
+                    aria-label="linkedin icon"
+                    class="social-media__icon footer-social-media__icon"
+                  >
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-social-media">
-          <h3 class="footer-social-media__title">Приєднуйтесь</h3>
-          <ul class="social-media list">
-            <li class="social-media__item">
-              <a href="" class="social-media__link footer-social-media__link">
-                <svg
-                  lang="en"
-                  aria-label="instagram icon"
-                  class="social-media__icon footer-social-media__icon"
-                >
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a href="" class="social-media__link footer-social-media__link">
-                <svg
-                  lang="en"
-                  aria-label="twitter icon"
-                  class="social-media__icon footer-social-media__icon"
-                >
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a href="" class="social-media__link footer-social-media__link">
-                <svg
-                  lang="en"
-                  aria-label="facebook icon"
-                  class="social-media__icon footer-social-media__icon"
-                >
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a href="" class="social-media__link footer-social-media__link">
-                <svg
-                  lang="en"
-                  aria-label="linkedin icon"
-                  class="social-media__icon footer-social-media__icon"
-                >
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <form class="subscribe">
           <p class="subscribe__title">Підпишіться на розсилку</p>
@@ -567,6 +758,8 @@
         </form>
       </div>
     </div>
+
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

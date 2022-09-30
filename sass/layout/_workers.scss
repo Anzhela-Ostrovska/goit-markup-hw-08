@@ -1,13 +1,13 @@
 .workers-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
   margin-bottom: 0;
   background-color: var(--secondary-bgc-color);
 }
 .workers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 .workers__item {
   border-radius: 0px 0px 4px 4px;
@@ -16,6 +16,17 @@
 
   background-color: var(--primary-bgc-color);
   text-align: center;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+}
+@media screen and (max-width: 767px) {
+  .workers__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 .worker__info {
   padding-top: 30px;
