@@ -1,15 +1,19 @@
 .menu {
   @media screen and (max-width: 767px) {
     justify-content: flex-start;
+    margin-bottom: 40px;
   }
 
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   row-gap: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   @media screen and (min-width: 768px) {
     justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 
@@ -45,14 +49,17 @@
     justify-content: center;
   }
 }
-.card__item {
+.card__item:not(:last-child) {
   @media screen and (max-width: 767px) {
     margin-bottom: 30px;
   }
-  @media screen and (min-width: 768px) {
+}
+.card__item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 354px;
   }
 }
+
 .card__link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,12 +79,13 @@
   position: relative;
   overflow: hidden;
 }
+
 .card__overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 101%;
   background-color: var(--accent-color);
   overflow: auto;
   transform: translateY(100%);

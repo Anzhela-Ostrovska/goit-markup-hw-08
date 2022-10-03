@@ -103,6 +103,10 @@
     line-height: 20px;
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
   @media screen and (min-width: 1200px) {
     margin-bottom: 20px;
     width: 358px;
@@ -162,12 +166,14 @@
   @media screen and (min-width: 768px) {
     display: flex;
 
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: baseline;
   }
   @media screen and (max-width: 1199px) {
     display: flex;
 
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: baseline;
   }
   @media screen and (max-width: 767px) {
     display: block;
